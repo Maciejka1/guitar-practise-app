@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* src/styles.css */
+.button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.3s, box-shadow 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:disabled {
+  background: linear-gradient(45deg, #ccc, #aaa);
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #666;
+}
+
+/* Specific button styles for variation */
+.start-button {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.start-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+}
+
+.stop-button {
+  background: linear-gradient(45deg, #ff4757, #ff6b81);
+}
+
+.stop-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #ff6b81, #ff4757);
+}
+
+.sound-button {
+  background: linear-gradient(45deg, #2ed573, #7bed9f);
+}
+
+.sound-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #7bed9f, #2ed573);
+}
+
+/* Ensure buttons are responsive */
+@media (max-width: 600px) {
+  .button {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 5px 2px;
+  }
+}
